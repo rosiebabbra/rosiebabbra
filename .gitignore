@@ -9,7 +9,16 @@
 /coverage
 
 # production
+.firebase
+.firebaserc
+.github
+package-lock.json
+package.json
+package.tgz
+yarn.lock
 /build
+LICENSE
+_config.yml
 
 # misc
 .DS_Store
