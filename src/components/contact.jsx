@@ -1,11 +1,15 @@
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const initialState = {
   name: '',
   email: '',
   message: '',
 }
+const notify = () => toast("Your message has been sent.");
+
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState)
 
@@ -14,17 +18,18 @@ export const Contact = (props) => {
     setState((prevState) => ({ ...prevState, [name]: value }))
   }
   const clearState = () => setState({ ...initialState })
-
+  
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log(name, email, message)
     emailjs
       .sendForm(
-        'YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID'
+        'service_p348xlr', 'template_tmm2d7g', e.target, 'user_tB2n0lgbiEtKvaaAAmgTA'
       )
       .then(
         (result) => {
           console.log(result.text)
+          notify()
           clearState()
         },
         (error) => {
@@ -41,7 +46,7 @@ export const Contact = (props) => {
               <div className='section-title'>
                 <h2>Get In Touch</h2>
                 <p>
-                  Please fill out the form below to send us an email and we will
+                  Please fill out the form below to send an email and I will
                   get back to you as soon as possible.
                 </p>
               </div>
@@ -92,19 +97,11 @@ export const Contact = (props) => {
                 <button type='submit' className='btn btn-custom btn-lg'>
                   Send Message
                 </button>
+                <ToastContainer />
               </form>
             </div>
           </div>
           <div className='col-md-3 col-md-offset-1 contact-info'>
-            <div className='contact-item'>
-              <h3>Contact Info</h3>
-              <p>
-                <span>
-                  <i className='fa fa-map-marker'></i> Address
-                </span>
-                {props.data ? props.data.address : 'loading'}
-              </p>
-            </div>
             <div className='contact-item'>
               <p>
                 <span>
@@ -121,6 +118,20 @@ export const Contact = (props) => {
                 {props.data ? props.data.email : 'loading'}
               </p>
             </div>
+            <div className='contact-item'>
+              <p>
+              <span>
+                  <i className='fa fa-calendar'></i> Booking
+                </span>
+                <span>
+                  <div className='booking-button'>
+                    <a href='https://www.styleseat.com/makeupbyrosie' 
+                      target='_new' 
+                      style={{ background: "no-repeat url(img/styleseat.png) 136px 7px white" }}>BOOK NOW WITH</a>
+                  </div>
+                </span>
+              </p>
+            </div>
           </div>
           <div className='col-md-12'>
             <div className='row'>
@@ -128,7 +139,7 @@ export const Contact = (props) => {
                 <ul>
                   <li>
                     <a href={props.data ? props.data.facebook : '/'}>
-                      <i className='fa fa-facebook'></i>
+                      <i className='fa fa-instagram'></i>
                     </a>
                   </li>
                   <li>
@@ -145,16 +156,6 @@ export const Contact = (props) => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div id='footer'>
-        <div className='container text-center'>
-          <p>
-            &copy; 2020 Issaaf Kattan React Land Page Template. Design by{' '}
-            <a href='http://www.templatewire.com' rel='nofollow'>
-              TemplateWire
-            </a>
-          </p>
         </div>
       </div>
     </div>
