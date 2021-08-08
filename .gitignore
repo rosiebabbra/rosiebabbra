@@ -13,7 +13,6 @@
 .firebaserc
 .github
 package-lock.json
-package.json
 package.tgz
 yarn.lock
 /build
