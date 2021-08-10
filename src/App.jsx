@@ -3,6 +3,7 @@ import { Navigation } from "./components/navigation";
 import { About } from "./components/about";
 import { Services } from "./components/services";
 import { Gallery } from "./components/gallery";
+import { Booking } from "./components/booking";
 import { Testimonials } from "./components/testimonials";
 import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
@@ -27,6 +28,7 @@ const App = () => {
       <About data={landingPageData.About} />
       <Services data={landingPageData.Services} />
       <Testimonials data={landingPageData.Testimonials} />
+      <Booking data={landingPageData.Booking} />
       <Contact data={landingPageData.Contact} />
     </div>
   );

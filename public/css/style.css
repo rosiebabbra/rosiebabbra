@@ -188,7 +188,9 @@ hr {
   background-color: #E73C4E;
 }
 .btn:active,
-.btn.active {
+.btn.active,
+.booking-button:active
+.booking-button.active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: none;
@@ -200,7 +202,9 @@ a:focus,
 .btn.active:focus,
 .btn.focus,
 .btn:active.focus,
-.btn.active.focus {
+.btn.active.focus
+.booking-button:active:focus,
+.booking-button.active:focus {
   outline: none;
   outline-offset: none;
 }
@@ -442,24 +446,34 @@ header .intro-text {
   font-weight: 600;
   color: #666;
 }
-/* Team Section */
-#team {
+/* booking Section */
+#booking {
   padding: 100px 0;
 }
-#team h4 {
+#booking h4 {
   margin: 5px 0;
 }
-#team .team-img {
+#booking .booking-img {
   width: 240px;
 }
-#team .thumbnail {
+#booking .thumbnail {
   background: transparent;
   border: 0;
 }
-#team .thumbnail .caption {
+#booking .thumbnail .caption {
   padding: 10px 0 0;
   color: #888;
 }
+/* Booking Section */
+/* #booking {
+  padding: 100px 0;
+  background: #f6f6f6;
+}
+#booking i {
+  color: #e6e6e6;
+  font-size: 32px;
+  margin-bottom: 20px;
+} */
 /* Contact Section */
 #contact {
   padding: 100px 0 60px;
@@ -613,14 +627,20 @@ label {
   }
 }
 .booking-button {
-  width:247px;
-  height:53px;
-  border: 1px solid #c3c7c5;
-  background-color: white;
+  background-color: white; 
+  border: 2px solid #fff;
+  color: #1f386e; 
+  height: 40px; 
+  text-transform: uppercase; 
+  font-family: 'Square Market', 
+  sans-serif; letter-spacing: 1px; 
+  line-height: 38px; 
+  padding: 0 28px; 
+  font-weight: 500; font-size: 14px; cursor: pointer; display: inline-block;
 }
+
 .booking-button a {
   text-decoration: none;
-  color: black;
   float: left;
   background-color: white;
   text-align: left;

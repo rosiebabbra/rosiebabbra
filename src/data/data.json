@@ -40,12 +40,8 @@
       "name": "Hayden"
     }
   ],
-  "Team": [
-    {
-      "img": "img/team/01.jpg",
-      "name": "Rosie Babbra",
-      "job": ""
-    }
+  "Booking": [
+    {"text": ""}
   ],
   "Contact": {
     "phone": "+1 636 542 1747",

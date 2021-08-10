@@ -118,20 +118,24 @@ export const Contact = (props) => {
                 {props.data ? props.data.email : 'loading'}
               </p>
             </div>
-            <div className='contact-item'>
-              <p>
-              <span>
+            {/* <div className='contact-item'> */}
+              {/* <p> */}
+              {/* <span>
                   <i className='fa fa-calendar'></i> Booking
-                </span>
-                <span>
-                  <div className='booking-button'>
+                </span> */}
+                {/* <span> */}
+                  {/* <div className='booking-button'>
                     <a href='https://www.styleseat.com/makeupbyrosie' 
                       target='_new' 
                       style={{ background: "no-repeat url(img/styleseat.png) 136px 7px white" }}>BOOK NOW WITH</a>
-                  </div>
-                </span>
-              </p>
-            </div>
+                  </div> */}
+                  {/* <a target="_new" 
+                    className='booking-button' 
+                    href="https://squareup.com/appointments/book/84dedc22-88cd-4aeb-9229-0af7cfa6a037/LQB38EZC55798/start" 
+                    rel="nofollow">Book Now</a> */}
+                {/* </span> */}
+              {/* </p> */}
+            {/* </div> */}
           </div>
           <div className='col-md-12'>
             <div className='row'>
