@@ -430,10 +430,13 @@ header .intro-text {
   width: 256px;
   height: 256px;
   border-radius: 50%;
+  margin: auto !important;
 }
 .testimonial-content {
   position: relative;
   overflow: hidden;
+  padding-top: 25px;
+  text-align: center;
 }
 .testimonial-content p {
   margin-bottom: 0;
