@@ -4,7 +4,9 @@
     "paragraph": ""
   },
   "About": {
-    "paragraph": "I am a software engineer and self taught makeup artist specialized in editorial and special events makeup. I worked for MAC Cosmetics for five years before pursuing a freelance career. I am currently located in Los Angeles."
+    "paragraphOne": "Hello beautiful! A little bit about me: I live, breathe, and sleep makeup. I started off shadowing local makeup artists at the mere age of 15. I garnered experience working at weddings, boudoir shoots, and local fashion shows. I worked for MAC Cosmetics whilst attending college pursuing a career in the tech industry.",
+    "paragraphTwo":"I now split my time between working as a software engineer and as a freelance makeup artist. I have been afforded the opportunity to work with brides, models and actors in the Los Angeles area and beyond. For whatever occasion you're seeking a makeup artist, I can promise that your needs will not only be met, but will be exceeded.",
+    "paragraphThree": "IMPORTANT: All clients will be required to sign a COVID-19 waiver form upon arrival. All makeup applications are currently taking place at my home studio in Santa Monica, California, unless otherwise specified, in order to ensure the optimal level of sanitation and cleanliness."
   },
   "Services": [
     {
