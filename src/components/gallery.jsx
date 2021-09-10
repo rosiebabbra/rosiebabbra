@@ -76,7 +76,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/04-small.jpg'
+                      src='img/portfolio/05-small.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -96,7 +96,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/05-small.jpg'
+                      src='img/portfolio/rosieb_11.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
