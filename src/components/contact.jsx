@@ -57,7 +57,7 @@ export const Contact = (props) => {
                       <input
                         type='text'
                         id='name'
-                        name='name'
+                        name='from_name'
                         className='form-control'
                         placeholder='Name'
                         required
@@ -71,7 +71,7 @@ export const Contact = (props) => {
                       <input
                         type='email'
                         id='email'
-                        name='email'
+                        name='from_email'
                         className='form-control'
                         placeholder='Email'
                         required
