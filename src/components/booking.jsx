@@ -6,7 +6,7 @@ export const Booking = props => (
         <div className='section-title'>
           <h2>Book Me</h2>
           </div>
-        <ScriptTag type="text/javascript" src="https://square.site/appointments/buyer/widget/84dedc22-88cd-4aeb-9229-0af7cfa6a037/LQB38EZC55798.js" />
+        <ScriptTag type="text/javascript" src="https://square.site/appointments/buyer/widget/84dedc22-88cd-4aeb-9229-0af7cfa6a037/LKQ1GBCZNA1KW.js" />
         </div>
     </div>
     )
