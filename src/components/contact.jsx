@@ -157,6 +157,12 @@ export const Contact = (props) => {
                       <i className='fa fa-youtube'></i>
                     </a>
                   </li>
+                  <li>
+                    <a href={props.data ? props.data.yelp : '/'}
+                        target="_new">
+                      <i className='fa fa-yelp'></i>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
