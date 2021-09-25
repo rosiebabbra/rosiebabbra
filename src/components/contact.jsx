@@ -81,6 +81,27 @@ export const Contact = (props) => {
                       <p className='help-block text-danger'></p>
                     </div>
                   </div>
+                  <div className='col-md-6'>
+                    <div className='form-group'>
+                      <select
+                        type='source'
+                        id='source'
+                        name='from_source'
+                        className='form-control'
+                        placeholder='How did you hear about us?'
+                        required
+                        onChange={handleChange}>
+                      <option value="" disabled selected>How did you hear about us?</option>
+                      <option value="yelp">Yelp</option>
+                      <option value="google">Google</option>
+                      <option value="instagram">Instagram</option>
+                      <option value="snapchat">Snapchat</option>
+                      <option value="referral">Referral</option>
+                      <option value="other">Other</option>
+                        </select>
+                      <p className='help-block text-danger'></p>
+                    </div>
+                  </div>
                 </div>
                 <div className='form-group'>
                   <textarea
