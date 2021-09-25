@@ -6,12 +6,13 @@ import 'react-toastify/dist/ReactToastify.css';
 const initialState = {
   name: '',
   email: '',
+  source: '',
   message: '',
 }
 const notify = () => toast("Your message has been sent.");
 
 export const Contact = (props) => {
-  const [{ name, email, message }, setState] = useState(initialState)
+  const [{ name, email, source, message }, setState] = useState(initialState)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -21,7 +22,7 @@ export const Contact = (props) => {
   
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(name, email, message)
+    console.log(name, email, source, message)
     emailjs
       .sendForm(
         'service_p348xlr', 'template_tmm2d7g', e.target, 'user_tB2n0lgbiEtKvaaAAmgTA'
