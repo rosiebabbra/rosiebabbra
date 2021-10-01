@@ -9,7 +9,7 @@ const initialState = {
   source: '',
   message: '',
 }
-const notify = () => toast("Your message has been sent.");
+const notify = () => toast("Your message has been sent.", {position: "bottom-right"});
 
 export const Contact = (props) => {
   const [{ name, email, source, message }, setState] = useState(initialState)
