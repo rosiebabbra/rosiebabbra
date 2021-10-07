@@ -16,7 +16,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/01-small.jpg'
+                      src='img/portfolio/anita-01.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -36,7 +36,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/02-small.jpg'
+                      src='img/portfolio/narjis.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -56,7 +56,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/03-small.jpg'
+                      src='img/portfolio/alex.jpeg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -76,7 +76,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/05-small.jpg'
+                      src='img/portfolio/romy.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -96,7 +96,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/rosieb_11.jpg'
+                      src='img/portfolio/rosie.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -116,7 +116,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/06-small.jpg'
+                      src='img/portfolio/anita-02.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
