@@ -16,7 +16,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/anita-01.jpg'
+                      src='img/portfolio/narjis.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -36,7 +36,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/narjis.jpg'
+                      src='img/portfolio/alex-02.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -76,7 +76,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/romy.jpg'
+                      src='img/portfolio/anita-01.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}
@@ -96,7 +96,7 @@ export const Gallery = (props) => {
                       <h4></h4>
                     </div>
                     <img
-                      src='img/portfolio/rosie.jpg'
+                      src='img/portfolio/alex-03.jpg'
                       className='img-responsive'
                       alt='Project Title'
                     />{' '}

@@ -124,6 +124,43 @@ export const Contact = (props) => {
             </div>
           </div>
           <div className='col-md-3 col-md-offset-1 contact-info'>
+          <div className='contact-item'>
+              <p>
+                <span>
+                  <i className='fa fa-calendar'></i> Hours
+                </span>{' '}
+                <table id='hour-table'>
+                  <tr>
+                    <th class='hour-table-head'>Monday</th>
+                    <th class='hour-table-head'>5 - 9 PM</th>
+                  </tr>
+                  <tr>
+                    <th class='hour-table-head'>Tuesday</th>
+                    <th class='hour-table-head'>5 - 9 PM</th>
+                  </tr>
+                  <tr>
+                    <th class='hour-table-head'>Wednesday</th>
+                    <th class='hour-table-head'>5 - 9 PM</th>
+                  </tr>
+                  <tr>
+                    <th class='hour-table-head'>Thursday</th>
+                    <th class='hour-table-head'>5 - 9 PM</th>
+                  </tr>
+                  <tr>
+                    <th class='hour-table-head'>Friday</th>
+                    <th class='hour-table-head'>5 - 9 PM</th>
+                  </tr>
+                  <tr>
+                    <th class='hour-table-head'>Saturday</th>
+                    <th class='hour-table-head'>12 - 8 PM</th>
+                  </tr>
+                  <tr>
+                    <th class='hour-table-head'>Sunday</th>
+                    <th class='hour-table-head'>12 - 8 PM</th>
+                  </tr>
+                </table>
+              </p>
+            </div>
             <div className='contact-item'>
               <p>
                 <span>
