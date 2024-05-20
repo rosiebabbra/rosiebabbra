@@ -18,6 +18,7 @@ export const Navigation = (props) => {
           <a className='navbar-brand page-scroll' href='#page-top'>
             Rosie Babbra
           </a>{' '}
+          <p></p>
         </div>
 
         <div
@@ -35,16 +36,16 @@ export const Navigation = (props) => {
                 About
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href='#services' className='page-scroll'>
                 Services
               </a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href='#testimonials' className='page-scroll'>
                 Testimonials
               </a>
-            </li>
+            </li> */}
             <li>
               <a href='#booking' className='page-scroll'>
                 Booking

@@ -1452,9 +1452,14 @@ img {
 .thumbnail a>img,
 .carousel-inner>.item>img,
 .carousel-inner>.item>a>img {
-  display: block;
-  max-width: 100%;
-  /* max-height: 100%; */
+  /* display: block; */
+  width: 100%;
+  height: auto;
+  /* padding-bottom: 15px; */
+}
+
+.about-img {
+  max-width: 75%;
 }
 
 .img-rounded {
@@ -2364,7 +2369,7 @@ pre code {
   }
 
   .col-sm-2 {
-    width: 16.66666667%;
+    /* width: 16.66666667%; */
   }
 
   .col-sm-1 {
