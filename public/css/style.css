@@ -911,7 +911,7 @@ label {
 }
 
 .image {
-  min-width: 300px;
+  min-width: 350px;
   width: 35vw;
   height: 75vh;
   /* aspect-ratio: 4/5; */

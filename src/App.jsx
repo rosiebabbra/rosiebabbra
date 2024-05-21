@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <div>
-      <Gallery />
+      <Gallery data={landingPageData.Gallery} />
       <Navigation />
       {/* <About data={landingPageData.About} /> */}
       {/* <Services data={landingPageData.Services} /> */}

@@ -40,7 +40,7 @@ export const Gallery = () => {
   };
 
   return (
-    <div className="image-gallery">
+    <div id="gallery" className="image-gallery">
       <div className="image-container">
         <img src={imageList[currentIndex].default} alt={`Slide ${currentIndex + 1}`} className="image" />
         <div className="nav-container">
