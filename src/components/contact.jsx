@@ -44,14 +44,14 @@ export const Contact = (props) => {
       <div className='container'>
         <div className='row'>
           <div>
-            <div className='text-center mb-4'>
-              <h2>Get In Touch</h2>
-              <p>
-                Please fill out the form below to send an email and I will
-                get back to you as soon as possible.
-              </p>
-            </div>
             <form name='sentMessage' validate onSubmit={handleSubmit}>
+              <div className='text-center mb-4'>
+                <h2>Contact</h2>
+                <p>
+                  Please fill out the form below to send an email and I will
+                  get back to you as soon as possible.
+                </p>
+              </div>
               <div className='row'>
                 <div className='col-md-6'>
                   <div class="form-text">Your name</div>
