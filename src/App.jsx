@@ -24,18 +24,18 @@ const App = () => {
   return (
     <div>
       <Gallery data={landingPageData.Gallery} />
-      {/* <About data={landingPageData.About} /> */}
+      <About data={landingPageData.About} />
       <Navigation />
-      {/* <Booking data={landingPageData.Booking} /> */}
+      <Booking data={landingPageData.Booking} />
       <Contact data={landingPageData.Contact} />
       <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto text-center">
-          {/* <div class="mb-2.5">
+          <div class="mb-2.5">
             <a href="https://www.instagram.com" target="_blank" class="mx-5 text-gray-400 cursor-pointer">
-              <i class="fab fa-instagram" style={{ fontSize: "3rem" }}></i>
+              <i class="fab fa-instagram" style={{ fontSize: "3rem", color: "black" }}></i>
             </a>
-          </div> */}
-          <p class="text-black">&copy; 2024 Rosie Babbra. All rights reserved.</p>
+          </div>
+          <p style={{ color: "black", marginTop: "15px", marginBottom: "50px" }}>&copy; 2024 Rosie Babbra. All rights reserved.</p>
         </div>
       </footer>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />

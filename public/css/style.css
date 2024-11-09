@@ -352,6 +352,12 @@ header .intro-text {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
 }
 
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #about p {
   line-height: 24px;
   margin: 30px 0;
@@ -691,6 +697,13 @@ label {
   .contact-info {
     text-align: center;
   }
+
+  .image-container {
+    position: relative;
+    height: 80vh;
+    margin: auto;
+    width: 90% !important;
+  }
 }
 
 
@@ -911,6 +924,13 @@ label {
 
 .image-container {
   position: relative;
+  height: 80vh;
+  margin: auto;
+  margin-bottom: 150px;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {

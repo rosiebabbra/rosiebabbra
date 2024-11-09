@@ -1,46 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+
 const images = require.context('../../public/img/portfolio', true);
 const imageList = images.keys().map(image => images(image));
 
-const PaginationDots = ({ total, current }) => {
-  const visibleDots = 5; // Number of dots to show at a time
-  let start = Math.max(0, current - Math.floor(visibleDots / 2));
-  let end = start + visibleDots;
-
-  if (end > total) {
-    end = total;
-    start = total - visibleDots;
-    if (start < 0) start = 0;
+function shuffle(array) {
+  const shuffledArray = [...array]; // Create a copy of the array to avoid mutating the original one
+  for (let i = shuffledArray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
   }
-
-  return (
-    <div className="pagination-dots">
-      <div className="dots-container" style={{ transform: `translateX(-${start * 20}px)` }}>
-        {Array.from({ length: total }).map((_, index) => (
-          <span
-            key={index}
-            className={`dot ${current === index ? 'active' : ''}`}
-          ></span>
-        ))}
-      </div>
-    </div>
-  );
-};
+  return shuffledArray;
+}
 
 export const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
+  const [scrambledImageList, setScrambledImageList] = useState([]);
+
+  useEffect(() => {
+    // Shuffle images once when the component mounts
+    setScrambledImageList(shuffle(imageList));
+  }, []);
 
   const handlePrevious = () => {
     initiateTransition(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === 0 ? imageList.length - 1 : prevIndex - 1));
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? scrambledImageList.length - 1 : prevIndex - 1));
     });
   };
 
   const handleNext = () => {
     initiateTransition(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === imageList.length - 1 ? 0 : prevIndex + 1));
+      setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
     });
   };
 
@@ -54,29 +45,35 @@ export const Gallery = () => {
   };
 
   useEffect(() => {
-    // Set up the interval to change slides every 3 seconds
-    const intervalId = setInterval(() => {
-      initiateTransition(() => {
-        setCurrentIndex((prevIndex) => (prevIndex === imageList.length - 1 ? 0 : prevIndex + 1));
-      });
-    }, 3000);
+    if (scrambledImageList.length > 0) {
+      // Set up the interval to change slides every 3 seconds
+      const intervalId = setInterval(() => {
+        initiateTransition(() => {
+          setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
+        });
+      }, 3000);
 
-    // Clear the interval when the component unmounts
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+      // Clear the interval when the component unmounts
+      return () => {
+        clearInterval(intervalId);
+      };
+    }
+  }, [scrambledImageList]);
+
+  if (scrambledImageList.length === 0) {
+    return null; // Or a loading indicator if desired
+  }
 
   return (
     <div id="gallery" className="image-gallery">
       <div className="image-container">
         <img
-          src={imageList[currentIndex].default}
+          src={scrambledImageList[currentIndex].default}
           alt={`Slide ${currentIndex + 1}`}
           className={`image ${isFading ? 'fade-out' : 'fade-in'}`}
         />
         <div className="nav-container">
-          {/* <PaginationDots class="pagination-dots" total={imageList.length} current={currentIndex} /> */}
+          {/* Navigation buttons */}
           {/* <div className="nav-buttons">
             <button onClick={handlePrevious} className="nav-button"><IoIosArrowBack /></button>
             <button onClick={handleNext} className="nav-button"><IoIosArrowForward /></button>
