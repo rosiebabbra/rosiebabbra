@@ -24,12 +24,21 @@ const App = () => {
   return (
     <div>
       <Gallery data={landingPageData.Gallery} />
-      <Navigation />
       {/* <About data={landingPageData.About} /> */}
-      {/* <Services data={landingPageData.Services} /> */}
-      {/* <Testimonials data={landingPageData.Testimonials} /> */}
-      <Booking data={landingPageData.Booking} />
+      <Navigation />
+      {/* <Booking data={landingPageData.Booking} /> */}
       <Contact data={landingPageData.Contact} />
+      <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+          {/* <div class="mb-2.5">
+            <a href="https://www.instagram.com" target="_blank" class="mx-5 text-gray-400 cursor-pointer">
+              <i class="fab fa-instagram" style={{ fontSize: "3rem" }}></i>
+            </a>
+          </div> */}
+          <p class="text-black">&copy; 2024 Rosie Babbra. All rights reserved.</p>
+        </div>
+      </footer>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     </div>
   );
 };
