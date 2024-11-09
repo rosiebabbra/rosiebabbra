@@ -354,6 +354,7 @@ header .intro-text {
 
 .about-container {
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
 }
@@ -708,6 +709,13 @@ label {
     height: 80vh;
     margin: auto;
     width: 90% !important;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
 

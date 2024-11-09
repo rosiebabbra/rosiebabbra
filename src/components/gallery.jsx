@@ -51,7 +51,7 @@ export const Gallery = () => {
         initiateTransition(() => {
           setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
         });
-      }, 3000);
+      }, 2000);
 
       // Clear the interval when the component unmounts
       return () => {
