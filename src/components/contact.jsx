@@ -54,13 +54,13 @@ export const Contact = (props) => {
             <form name='sentMessage' validate onSubmit={handleSubmit}>
               <div className='row'>
                 <div className='col-md-6'>
+                  <div class="form-text">Your name</div>
                   <div className='form-group'>
                     <input
                       type='text'
                       id='name'
                       name='from_name'
                       className='form-control'
-                      placeholder='Name'
                       required
                       onChange={handleChange}
                     />
@@ -68,13 +68,13 @@ export const Contact = (props) => {
                   </div>
                 </div>
                 <div className='col-md-6'>
+                  <div class="form-text">Your email</div>
                   <div className='form-group'>
                     <input
                       type='email'
                       id='email'
                       name='from_email'
                       className='form-control'
-                      placeholder='Email'
                       required
                       onChange={handleChange}
                     />
@@ -82,6 +82,7 @@ export const Contact = (props) => {
                   </div>
                 </div>
                 <div className='col-md-12'>
+                  <div class="form-text">How did you hear about us?</div>
                   <div className='form-group'>
                     <select
                       id='source'
@@ -89,10 +90,9 @@ export const Contact = (props) => {
                       className='form-control'
                       required
                       onChange={handleChange}>
-                      <option value="" disabled selected>How did you hear about us?</option>
                       <option value="yelp">Yelp</option>
                       <option value="google">Google</option>
-                      <option value="instagram">Instagram</option>
+                      <option value="instagram" selected>Instagram</option>
                       <option value="snapchat">Snapchat</option>
                       <option value="referral">Referral</option>
                       <option value="other">Other</option>
@@ -101,13 +101,13 @@ export const Contact = (props) => {
                   </div>
                 </div>
                 <div className='col-md-12'>
+                  <div class="form-text">Your message</div>
                   <div className='form-group'>
                     <textarea
                       name='message'
                       id='message'
                       className='form-control'
                       rows='4'
-                      placeholder='Message'
                       required
                       onChange={handleChange}
                     ></textarea>

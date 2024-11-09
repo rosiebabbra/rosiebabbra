@@ -601,6 +601,7 @@ header .intro-text {
   padding-top: 20px;
 }
 
+
 #contact .text-danger {
   color: #cc0033;
   text-align: left;
@@ -609,14 +610,18 @@ header .intro-text {
 #contact .btn-custom {
   margin: 30px 0;
   font-weight: bold;
-  background: black;
-  border: 2px solid #fff;
+  background: linear-gradient(to left, #6e25db 0%, #e815e5 100%);
+  /* opacity: 0.75; */
+  filter: alpha(opacity=70);
 }
 
 #contact .btn-custom:hover {
-  color: #fff;
-  background: rgb(32, 199, 32);
+  box-shadow: 0px 4px 15px rgba(110, 37, 219, 0.5);
+  /* Add a soft glow effect */
+  transition: all 0.3s ease;
+  /* Smooth transition effect */
 }
+
 
 label {
   font-size: 12px;
@@ -670,7 +675,7 @@ label {
 }
 
 .form-control {
-  border-radius: 0;
+  border-radius: 29px;
   box-shadow: none;
   border-color: #d2d6de;
 }
@@ -729,9 +734,11 @@ label {
 }
 
 .form-control:focus {
-  border-color: #ff6347;
+  border-color: #6e25db;
+  border-width: 2px;
   box-shadow: none;
 }
+
 
 .help-block {
   color: red;

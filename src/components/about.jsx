@@ -19,6 +19,7 @@ export const About = (props) => {
                 <p>{props.data ? props.data.paragraphThree : "loading..."}</p>
                 <p>{props.data ? props.data.paragraphFour : "loading..."}</p>
                 <p>{props.data ? props.data.paragraphFive : "loading..."}</p>
+                <p>{props.data ? props.data.paragraphSix : "loading..."}  </p>
               </div>
             </div>
           </div>
