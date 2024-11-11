@@ -23,17 +23,17 @@ export const Gallery = () => {
     setScrambledImageList(shuffle(imageList));
   }, []);
 
-  const handlePrevious = () => {
-    initiateTransition(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === 0 ? scrambledImageList.length - 1 : prevIndex - 1));
-    });
-  };
+  // const handlePrevious = () => {
+  //   initiateTransition(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex === 0 ? scrambledImageList.length - 1 : prevIndex - 1));
+  //   });
+  // };
 
-  const handleNext = () => {
-    initiateTransition(() => {
-      setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
-    });
-  };
+  // const handleNext = () => {
+  //   initiateTransition(() => {
+  //     setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
+  //   });
+  // };
 
   // Initiate the fading transition before switching images
   const initiateTransition = (callback) => {
@@ -41,7 +41,7 @@ export const Gallery = () => {
     setTimeout(() => {
       callback();
       setIsFading(false);
-    }, 500); // Match this to the fade-out duration
+    }, 400); // Match this to the fade-out duration
   };
 
   useEffect(() => {

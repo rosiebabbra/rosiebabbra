@@ -106,10 +106,9 @@ hr {
 
 #menu.navbar-default .navbar-nav>li>a {
   font-family: "Lato", sans-serif;
-  text-transform: uppercase;
   color: #555;
   font-size: 15px;
-  font-weight: 400;
+  font-weight: 600;
   padding: 8px 2px;
   border-radius: 0;
   margin: 9px 20px 0;
@@ -859,8 +858,8 @@ label {
   /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
  However, delay the fade out process for 2.5 seconds */
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  -webkit-animation: fadein 0.4s, fadeout 0.4s 2s;
+  animation: fadein 0.4s, fadeout 0.4s 2s;
 }
 
 /* Animations to fade the snackbar in and out */

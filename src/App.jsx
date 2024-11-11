@@ -31,7 +31,7 @@ const App = () => {
       <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto text-center">
           <div class="mb-2.5">
-            <a href="https://www.instagram.com" target="_blank" class="mx-5 text-gray-400 cursor-pointer">
+            <a href="https://www.instagram.com/rosiebabbra" target="_blank" class="mx-5 text-gray-400 cursor-pointer">
               <i class="fab fa-instagram" style={{ fontSize: "3rem", color: "black" }}></i>
             </a>
           </div>
