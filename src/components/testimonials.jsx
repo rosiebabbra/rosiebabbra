@@ -34,7 +34,6 @@ export const Testimonials = (props) => {
               <a href="https://www.yelp.com/biz/rosie-babbra-santa-monica?hrid=ldqVpC2ro0SmeNnUpiO3_w" rel="nofollow noopener">review</a> of 
               <a href="https://www.yelp.com/biz/De3QT2TtVyqN1cbmouTA8g" rel="nofollow noopener">Rosie Babbra</a> on 
               <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
-              <ScriptTag src="https://www.yelp.com/embed/widgets.js" type="text/javascript" async></ScriptTag>
               </span>
         </div> */}
       </div>
