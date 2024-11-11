@@ -37,7 +37,7 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          firebase hosting:channel:deploy ${{ github.head_ref }} --expires 7d
+          firebase hosting:channel:deploy ${{ github.head_ref }} --project rosiebabbra-4e90b --expires 7d
 
   deploy-main:
     runs-on: ubuntu-latest
@@ -61,4 +61,4 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
-          firebase deploy --only hosting --non-interactive
+          firebase deploy --only hosting --project rosiebabbra-4e90b --non-interactive
