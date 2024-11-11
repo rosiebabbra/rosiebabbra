@@ -1,5 +1,3 @@
-import ScriptTag from 'react-script-tag';
-
 export const Testimonials = (props) => {
   return (
     <div id='testimonials'>
@@ -12,19 +10,19 @@ export const Testimonials = (props) => {
         <div className='row'>
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className='col-md-4'>
-                  <div className='testimonial'>
-                    <div className='testimonial-image'>
-                      {' '}
-                      <img src={d.img} alt='' />{' '}
-                    </div>
-                    <div className='testimonial-content'>
-                      <p>"{d.text}"</p>
-                      <div className='testimonial-meta'> - {d.name} </div>
-                    </div>
+              <div key={`${d.name}-${i}`} className='col-md-4'>
+                <div className='testimonial'>
+                  <div className='testimonial-image'>
+                    {' '}
+                    <img src={d.img} alt='' />{' '}
+                  </div>
+                  <div className='testimonial-content'>
+                    <p>"{d.text}"</p>
+                    <div className='testimonial-meta'> - {d.name} </div>
                   </div>
                 </div>
-              ))
+              </div>
+            ))
             : 'loading'}
         </div>
         {/* Yelp Review Widget */}
@@ -36,7 +34,6 @@ export const Testimonials = (props) => {
               <a href="https://www.yelp.com/biz/rosie-babbra-santa-monica?hrid=ldqVpC2ro0SmeNnUpiO3_w" rel="nofollow noopener">review</a> of 
               <a href="https://www.yelp.com/biz/De3QT2TtVyqN1cbmouTA8g" rel="nofollow noopener">Rosie Babbra</a> on 
               <a href="https://www.yelp.com" rel="nofollow noopener">Yelp</a>
-              <ScriptTag src="https://www.yelp.com/embed/widgets.js" type="text/javascript" async></ScriptTag>
               </span>
         </div> */}
       </div>

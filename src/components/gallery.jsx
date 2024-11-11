@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const images = require.context('../../public/img/portfolio', true);
-const imageList = images.keys().map(image => images(image));
+const imageList = images.keys().map(image => {
+  const importedImage = images(image);
+  return importedImage.default ? importedImage.default : importedImage;
+});
 
 function shuffle(array) {
-  const shuffledArray = [...array]; // Create a copy of the array to avoid mutating the original one
+  const shuffledArray = [...array];
   for (let i = shuffledArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
@@ -20,22 +22,11 @@ export const Gallery = () => {
 
   useEffect(() => {
     // Shuffle images once when the component mounts
-    setScrambledImageList(shuffle(imageList));
+    const shuffled = shuffle(imageList);
+    console.log('Shuffled Image List:', shuffled);  // Debugging log
+    setScrambledImageList(shuffled);
   }, []);
 
-  // const handlePrevious = () => {
-  //   initiateTransition(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex === 0 ? scrambledImageList.length - 1 : prevIndex - 1));
-  //   });
-  // };
-
-  // const handleNext = () => {
-  //   initiateTransition(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
-  //   });
-  // };
-
-  // Initiate the fading transition before switching images
   const initiateTransition = (callback) => {
     setIsFading(true);
     setTimeout(() => {
@@ -60,24 +51,22 @@ export const Gallery = () => {
     }
   }, [scrambledImageList]);
 
-  if (scrambledImageList.length === 0) {
+  if (!scrambledImageList || scrambledImageList.length === 0) {
     return null; // Or a loading indicator if desired
   }
+
+  console.log('Current Image:', scrambledImageList[currentIndex]);  // Debugging log
 
   return (
     <div id="gallery" className="image-gallery">
       <div className="image-container">
         <img
-          src={scrambledImageList[currentIndex].default}
+          src={scrambledImageList[currentIndex] || '/path/to/default/image.jpg'}
           alt={`Slide ${currentIndex + 1}`}
           className={`image ${isFading ? 'fade-out' : 'fade-in'}`}
         />
         <div className="nav-container">
           {/* Navigation buttons */}
-          {/* <div className="nav-buttons">
-            <button onClick={handlePrevious} className="nav-button"><IoIosArrowBack /></button>
-            <button onClick={handleNext} className="nav-button"><IoIosArrowForward /></button>
-          </div> */}
         </div>
       </div>
     </div>

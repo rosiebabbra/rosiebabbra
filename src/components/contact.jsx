@@ -46,7 +46,7 @@ export const Contact = (props) => {
           <div>
             <form name='sentMessage' validate onSubmit={handleSubmit}>
               <div className='text-center mb-4'>
-                <h2>Contact</h2>
+                <h2 class="section-title">Contact</h2>
                 <p style={{ "margin": "15px" }}>
                   Please fill out the form below to send an email and I will
                   get back to you as soon as possible.
@@ -55,7 +55,7 @@ export const Contact = (props) => {
               <br />
               <div className='row'>
                 <div className='col-md-6'>
-                  <div class="form-text">Your name</div>
+                  <div className="form-text">Your name</div>
                   <div className='form-group'>
                     <input
                       type='text'
@@ -69,7 +69,7 @@ export const Contact = (props) => {
                   </div>
                 </div>
                 <div className='col-md-6'>
-                  <div class="form-text">Your email</div>
+                  <div className="form-text">Your email</div>
                   <div className='form-group'>
                     <input
                       type='email'
@@ -83,7 +83,7 @@ export const Contact = (props) => {
                   </div>
                 </div>
                 <div className='col-md-12'>
-                  <div class="form-text">How did you hear about us?</div>
+                  <div className="form-text">How did you hear about us?</div>
                   <div className='form-group'>
                     <select
                       id='source'
@@ -102,7 +102,7 @@ export const Contact = (props) => {
                   </div>
                 </div>
                 <div className='col-md-12'>
-                  <div class="form-text">Your message</div>
+                  <div className="form-text">Your message</div>
                   <div className='form-group'>
                     <textarea
                       name='message'
