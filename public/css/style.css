@@ -136,36 +136,12 @@ hr {
   background-color: transparent;
 }
 
-.navbar-default .navbar-nav>.active>a:after,
-.navbar-default .navbar-nav>.active>a:hover:after,
-.navbar-default .navbar-nav>.active>a:focus:after {
-  display: block !important;
-  position: absolute !important;
-  left: 0 !important;
-  bottom: -1px !important;
-  width: 100% !important;
-  height: 2px !important;
-  background: black !important;
-  content: "" !important;
-  transition: width 0.2s !important;
-}
-
 .navbar-toggle {
   border-radius: 0;
 }
 
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #fff;
-  border-color: #E73C4E;
-}
-
-.navbar-default .navbar-toggle:hover>.icon-bar {
-  background-color: #E73C4E;
-}
 
 .section-title {
-  margin-bottom: 70px;
   font-size: 26px;
   font-weight: 700;
 }
@@ -196,7 +172,6 @@ hr {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   color: #fff;
-  background-color: #E73C4E;
   /* background-image: linear-gradient(to right, #E73C4E 0%, #FF42D4 100%); */
   padding: 14px 34px;
   letter-spacing: 1px;
@@ -206,16 +181,11 @@ hr {
   border-radius: 25px;
   transition: all 0.5s linear;
   border: 0;
-}
-
-.btn-custom:hover,
-.btn-custom:focus,
-.btn-custom.focus,
-.btn-custom:active,
-.btn-custom.active {
-  color: #fff;
-  background-image: none;
-  background-color: #E73C4E;
+  margin: 30px 0;
+  font-weight: bold;
+  background: linear-gradient(to left, #6e25db 0%, #e815e5 100%);
+  /* opacity: 0.75; */
+  filter: alpha(opacity=70);
 }
 
 .btn:active,
@@ -284,24 +254,6 @@ header .intro-text {
   text-align: center;
 }
 
-/* Features Section */
-#features {
-  background: #f6f6f6;
-}
-
-#features i.fa {
-  font-size: 38px;
-  margin-bottom: 20px;
-  transition: all 0.5s;
-  color: #fff;
-  width: 100px;
-  height: 100px;
-  padding: 30px 0;
-  border-radius: 50%;
-  background: linear-gradient(to right, #000000 0%, #000009 100%);
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-}
-
 /* About Section */
 #about {
   padding: 100px 0;
@@ -365,57 +317,6 @@ header .intro-text {
   margin: 30px 0;
 }
 
-/* Services Section */
-#services {
-  padding: 100px 0;
-  /* background: linear-gradient(to right, #E73C4E 0%, #FF42D4 100%); */
-  color: #fff;
-}
-
-#services .service-desc {
-  margin: 10px 10px 20px;
-}
-
-#services h2 {
-  color: #fff;
-}
-
-#services .section-title h2::after {
-  position: absolute;
-  content: "";
-  background: rgba(255, 255, 255, 0.3);
-  height: 4px;
-  width: 60px;
-  bottom: 0;
-  margin-left: -30px;
-  left: 50%;
-}
-
-#services i.fa {
-  font-size: 42px;
-  width: 120px;
-  height: 120px;
-  padding: 40px 0;
-  background: linear-gradient(to right, #E73C4E 0%, #ef05f7 100%);
-  border-radius: 50%;
-  color: #fff;
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
-}
-
-#services h3 {
-  font-weight: 500;
-  padding: 5px 0;
-  color: #fff;
-}
-
-#services p {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-#services .service-desc {
-  margin-bottom: 40px;
-}
-
 /* Portfolio Section */
 #portfolio {
   padding: 100px 0;
@@ -474,91 +375,6 @@ header .intro-text {
   opacity: 1;
 }
 
-/* Testimonials Section */
-#testimonials {
-  padding: 100px 0;
-  background: #f6f6f6;
-}
-
-#testimonials i {
-  color: #e6e6e6;
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.testimonial {
-  position: relative;
-  padding: 20px;
-}
-
-.testimonial-image {
-  /* float: left; */
-  margin-bottom: 25px;
-}
-
-.testimonial-image,
-.testimonial-image img {
-  display: block;
-  width: 256px;
-  height: 256px;
-  border-radius: 50%;
-  margin: auto !important;
-}
-
-.testimonial-content {
-  position: relative;
-  overflow: hidden;
-  padding-top: 25px;
-  text-align: center;
-}
-
-.testimonial-content p {
-  margin-bottom: 0;
-  font-size: 14px;
-  font-style: italic;
-}
-
-.testimonial-meta {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: 600;
-  color: #666;
-}
-
-/* booking Section */
-#booking {
-  padding: 100px 0;
-}
-
-#booking h4 {
-  margin: 5px 0;
-}
-
-#booking .booking-img {
-  width: 240px;
-}
-
-#booking .thumbnail {
-  background: transparent;
-  border: 0;
-}
-
-#booking .thumbnail .caption {
-  padding: 10px 0 0;
-  color: #888;
-}
-
-/* Booking Section */
-/* #booking {
-  padding: 100px 0;
-  background: #f6f6f6;
-}
-#booking i {
-  color: #e6e6e6;
-  font-size: 32px;
-  margin-bottom: 20px;
-} */
-/* Contact Section */
 #contact {
   padding: 100px 0 60px;
   /* background: #000000; */
@@ -566,7 +382,6 @@ header .intro-text {
 }
 
 #contact .section-title {
-  margin-bottom: 40px;
   color: #000000;
 }
 
@@ -578,7 +393,6 @@ header .intro-text {
   color: #000000;
   margin-top: 10px;
   margin-bottom: 15px;
-  padding-bottom: 15px;
 }
 
 #contact .section-title h2::after {
@@ -609,43 +423,11 @@ header .intro-text {
   text-align: left;
 }
 
-#contact .btn-custom {
-  margin: 30px 0;
-  font-weight: bold;
-  background: linear-gradient(to left, #6e25db 0%, #e815e5 100%);
-  /* opacity: 0.75; */
-  filter: alpha(opacity=70);
-}
-
 #contact .btn-custom:hover {
   box-shadow: 0px 4px 15px rgba(110, 37, 219, 0.5);
   /* Add a soft glow effect */
   transition: all 0.3s ease;
   /* Smooth transition effect */
-}
-
-
-label {
-  font-size: 12px;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  float: left;
-}
-
-.cf-row-1 {
-  width: 35%;
-  display: inline-block;
-  padding: 5px;
-}
-
-
-#contact {
-  padding: 60px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  /* Ensure the container takes the full height of the viewport */
 }
 
 .container {
@@ -955,7 +737,6 @@ label {
   height: 75vh;
   margin: auto;
   padding: 0;
-  /* aspect-ratio: 4/5; */
   object-fit: cover;
   display: block;
   overflow: hidden !important;
@@ -967,79 +748,6 @@ label {
   margin-top: 10px;
 }
 
-.pagination-dots {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: flex-start;
-  align-items: start;
-  padding-top: 15px;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #6200ea;
-  /* Active dot color */
-}
-
-.nav-buttons {
-  display: flex;
-  justify-content: flex-end;
-  right: 0;
-  bottom: -40px;
-  gap: 10px;
-}
-
-.nav-button {
-  background: none;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 24px;
-  background-color: #333;
-  color: white;
-  padding: 15px;
-}
-
-.nav-button:focus {
-  outline: none;
-}
-
-/* PaginationDots.css */
-.pagination-dots {
-  overflow: hidden;
-  width: 100px;
-  /* Width for 5 dots */
-  margin: 0 auto;
-}
-
-.dots-container {
-  display: flex;
-  transition: transform 0.3s ease;
-}
-
-.dot {
-  width: 10px;
-  height: 10px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: black;
-  /* Active dot color */
-}
 
 @keyframes fadeOut {
   0% {
@@ -1059,13 +767,6 @@ label {
   100% {
     opacity: 1;
   }
-}
-
-.image {
-  position: absolute;
-  width: 100%;
-  height: auto;
-  transition: opacity 0.5s ease-in-out;
 }
 
 .fade-out {
