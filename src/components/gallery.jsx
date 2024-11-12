@@ -17,31 +17,26 @@ function shuffle(array) {
 
 export const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isFading, setIsFading] = useState(false);
+  const [isFadingOut, setIsFadingOut] = useState(false);
   const [scrambledImageList, setScrambledImageList] = useState([]);
 
   useEffect(() => {
     // Shuffle images once when the component mounts
     const shuffled = shuffle(imageList);
-    console.log('Shuffled Image List:', shuffled);  // Debugging log
     setScrambledImageList(shuffled);
   }, []);
-
-  const initiateTransition = (callback) => {
-    setIsFading(true);
-    setTimeout(() => {
-      callback();
-      setIsFading(false);
-    }, 400); // Match this to the fade-out duration
-  };
 
   useEffect(() => {
     if (scrambledImageList.length > 0) {
       // Set up the interval to change slides every 3 seconds
       const intervalId = setInterval(() => {
-        initiateTransition(() => {
+        setIsFadingOut(true); // Start fading out the current image
+
+        setTimeout(() => {
+          // After fading out, update the index and start fading in
           setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
-        });
+          setIsFadingOut(false);
+        }, 400); // Match this to the fade-out duration
       }, 2000);
 
       // Clear the interval when the component unmounts
@@ -55,15 +50,13 @@ export const Gallery = () => {
     return null; // Or a loading indicator if desired
   }
 
-  console.log('Current Image:', scrambledImageList[currentIndex]);  // Debugging log
-
   return (
     <div id="gallery" className="image-gallery">
       <div className="image-container">
         <img
           src={scrambledImageList[currentIndex] || '/path/to/default/image.jpg'}
           alt={`Slide ${currentIndex + 1}`}
-          className={`image ${isFading ? 'fade-out' : 'fade-in'}`}
+          className={`image ${isFadingOut ? 'fade-out' : 'fade-in'}`}
         />
         <div className="nav-container">
           {/* Navigation buttons */}
