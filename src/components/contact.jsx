@@ -65,7 +65,7 @@ export const Contact = (props) => {
                       required
                       onChange={handleChange}
                     />
-                    <p className='help-block text-danger'></p>
+
                   </div>
                 </div>
                 <div className='col-md-6'>
@@ -79,7 +79,7 @@ export const Contact = (props) => {
                       required
                       onChange={handleChange}
                     />
-                    <p className='help-block text-danger'></p>
+
                   </div>
                 </div>
                 <div className='col-md-12'>
@@ -98,7 +98,7 @@ export const Contact = (props) => {
                       <option value="referral">Referral</option>
                       <option value="other">Other</option>
                     </select>
-                    <p className='help-block text-danger'></p>
+
                   </div>
                 </div>
                 <div className='col-md-12'>
@@ -112,7 +112,7 @@ export const Contact = (props) => {
                       required
                       onChange={handleChange}
                     ></textarea>
-                    <p className='help-block text-danger'></p>
+
                   </div>
                 </div>
               </div>

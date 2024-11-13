@@ -17,7 +17,7 @@ function shuffle(array) {
 
 export const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isFadingOut, setIsFadingOut] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const [scrambledImageList, setScrambledImageList] = useState([]);
 
   useEffect(() => {
@@ -30,14 +30,18 @@ export const Gallery = () => {
     if (scrambledImageList.length > 0) {
       // Set up the interval to change slides every 3 seconds
       const intervalId = setInterval(() => {
-        setIsFadingOut(true); // Start fading out the current image
+        setIsTransitioning(true); // Start fading out the current image
 
         setTimeout(() => {
-          // After fading out, update the index and start fading in
+          // After fading out, update the index
           setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
-          setIsFadingOut(false);
         }, 400); // Match this to the fade-out duration
-      }, 2000);
+
+        setTimeout(() => {
+          // After index update, stop transitioning (fade in)
+          setIsTransitioning(false);
+        }, 800); // Allow time for the fade-out plus small delay
+      }, 3000); // Increase interval for more time between changes
 
       // Clear the interval when the component unmounts
       return () => {
@@ -56,11 +60,8 @@ export const Gallery = () => {
         <img
           src={scrambledImageList[currentIndex] || '/path/to/default/image.jpg'}
           alt={`Slide ${currentIndex + 1}`}
-          className={`image ${isFadingOut ? 'fade-out' : 'fade-in'}`}
+          className={`image ${isTransitioning ? 'fade-out' : 'fade-in'}`}
         />
-        <div className="nav-container">
-          {/* Navigation buttons */}
-        </div>
       </div>
     </div>
   );

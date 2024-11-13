@@ -21,9 +21,9 @@ const App = () => {
 
   return (
     <div>
+      <Navigation />
       <Gallery data={landingPageData.Gallery} />
       <About data={landingPageData.About} />
-      <Navigation />
       <Booking data={landingPageData.Booking} />
       <Contact data={landingPageData.Contact} />
       <footer className="bg-gray-800 text-white py-6">
