@@ -161,6 +161,11 @@ header .intro-text {
   align-items: center;
 }
 
+.about-img {
+  height:100%;
+  width:auto;
+}
+
 #about p {
   line-height: 24px;
   margin: 30px 0;

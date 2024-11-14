@@ -8,9 +8,8 @@ export const About = (props) => {
         </div></center>
       <div className="container">
         <div className="row about-container">
-          <div className="col-xs-12 col-md-6">
-            {" "}
-            <img src="img/about.jpg" className="about-img" alt="" />{" "}
+          <div className="col-xs-12 col-md-4">
+            <img src="img/about.jpg" alt="" />{" "}
           </div>
           <div className="col-xs-12 col-md-6">
             <div className="about-text">
