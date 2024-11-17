@@ -93,14 +93,11 @@ ol {
 .section-title {
   font-size: 26px;
   font-weight: 700;
-  margin-bottom: 30px;
 }
 
 .section-title h2 {
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 15px;
-  padding-bottom: 15px;
+  margin-top: 25px;
 }
 
 .btn-custom {
@@ -153,6 +150,12 @@ header .intro-text {
 /* About Section */
 #about {
   padding-bottom: 200px;
+}
+
+.aboutContainerShadowBox {
+  border-radius: 29px;
+  box-shadow: 5px 5px 10px lightgray !important;
+  padding:15px;
 }
 
 .about-container {
@@ -369,5 +372,11 @@ header .intro-text {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .section-title h2 {
+    position: relative;
+    margin-top: 25px;
+    margin-bottom: 25px;
   }
 }
