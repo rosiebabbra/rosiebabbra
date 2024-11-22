@@ -155,7 +155,7 @@ header .intro-text {
 .aboutContainerShadowBox {
   border-radius: 29px;
   box-shadow: 5px 5px 10px lightgray !important;
-  padding:15px;
+  padding:25px;
 }
 
 .about-container {
