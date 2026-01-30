@@ -24,7 +24,7 @@ const App = () => {
       <Navigation />
       <Gallery data={landingPageData.Gallery} />
       <About data={landingPageData.About} />
-      <Booking data={landingPageData.Booking} />
+      {/* <Booking data={landingPageData.Booking} /> */}
       <Contact data={landingPageData.Contact} />
       <footer className="bg-gray-800 text-white py-6">
         <div className="container mx-auto text-center">

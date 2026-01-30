@@ -1,66 +1,78 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from "react";
 
-const images = require.context('../../public/img/portfolio', true);
-const imageList = images.keys().map(image => {
+const images = require.context("../../public/img/portfolio", true);
+const imageList = images.keys().map((image) => {
   const importedImage = images(image);
   return importedImage.default ? importedImage.default : importedImage;
 });
 
 function shuffle(array) {
-  const shuffledArray = [...array];
-  for (let i = shuffledArray.length - 1; i > 0; i--) {
+  const a = [...array];
+  for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    [a[i], a[j]] = [a[j], a[i]];
   }
-  return shuffledArray;
+  return a;
 }
 
 export const Gallery = () => {
+  const scrambledImageList = useMemo(() => shuffle(imageList), []);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-  const [scrambledImageList, setScrambledImageList] = useState([]);
+
+  const tickTimeoutRef = useRef(null);
+  const fadeTimeoutRef = useRef(null);
 
   useEffect(() => {
-    // Shuffle images once when the component mounts
-    const shuffled = shuffle(imageList);
-    setScrambledImageList(shuffled);
-  }, []);
+    const DISPLAY_MS = 3000;
+    const FADE_OUT_MS = 400;
 
+    const scheduleNext = () => {
+      // show current image for a bit
+      tickTimeoutRef.current = window.setTimeout(() => {
+        setIsTransitioning(true); // start fade-out
+
+        // after fade-out, switch image + fade back in
+        fadeTimeoutRef.current = window.setTimeout(() => {
+          setCurrentIndex((prev) =>
+            prev === scrambledImageList.length - 1 ? 0 : prev + 1
+          );
+          setIsTransitioning(false); // fade-in
+          scheduleNext(); // loop
+        }, FADE_OUT_MS);
+      }, DISPLAY_MS);
+    };
+
+    scheduleNext();
+
+    return () => {
+      if (tickTimeoutRef.current) window.clearTimeout(tickTimeoutRef.current);
+      if (fadeTimeoutRef.current) window.clearTimeout(fadeTimeoutRef.current);
+    };
+  }, [scrambledImageList.length]);
+
+  // Optional: preload next image to reduce flicker
   useEffect(() => {
-    if (scrambledImageList.length > 0) {
-      // Set up the interval to change slides every 3 seconds
-      const intervalId = setInterval(() => {
-        setIsTransitioning(true); // Start fading out the current image
+    if (!scrambledImageList.length) return;
 
-        setTimeout(() => {
-          // After fading out, update the index
-          setCurrentIndex((prevIndex) => (prevIndex === scrambledImageList.length - 1 ? 0 : prevIndex + 1));
-        }, 400); // Match this to the fade-out duration
+    const nextIndex =
+      currentIndex === scrambledImageList.length - 1 ? 0 : currentIndex + 1;
 
-        setTimeout(() => {
-          // After index update, stop transitioning (fade in)
-          setIsTransitioning(false);
-        }, 800); // Allow time for the fade-out plus small delay
-      }, 3000); // Increase interval for more time between changes
+    const img = new Image();
+    img.src = scrambledImageList[nextIndex];
+    // img.decode && img.decode().catch(() => {});
+  }, [currentIndex, scrambledImageList]);
 
-      // Clear the interval when the component unmounts
-      return () => {
-        clearInterval(intervalId);
-      };
-    }
-  }, [scrambledImageList]);
-
-  if (!scrambledImageList || scrambledImageList.length === 0) {
-    return null; // Or a loading indicator if desired
-  }
+  if (!scrambledImageList.length) return null;
 
   return (
     <div id="gallery" className="image-gallery">
       <div className="image-container">
         <img
-          src={scrambledImageList[currentIndex] || '/path/to/default/image.jpg'}
+          src={scrambledImageList[currentIndex]}
           alt={`Slide ${currentIndex + 1}`}
-          className={`image ${isTransitioning ? 'fade-out' : 'fade-in'}`}
+          className={`image ${isTransitioning ? "fade-out" : "fade-in"}`}
+          draggable={false}
         />
       </div>
     </div>

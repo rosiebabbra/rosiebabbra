@@ -54,10 +54,10 @@ ol {
 }
 
 #menu.navbar-default .navbar-nav>li>a {
-  font-family: "Lato", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #555;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 400;
   padding: 8px 2px;
   border-radius: 0;
   margin: 9px 20px 0;
@@ -86,7 +86,7 @@ ol {
 }
 
 .navbar-toggle {
-  border:none;
+  border: none;
 }
 
 
@@ -103,7 +103,7 @@ ol {
 .btn-custom {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
-  color: #fff;
+  color: #000;
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -111,10 +111,10 @@ ol {
   font-weight: 500;
   border-radius: 25px;
   transition: all 0.5s linear;
-  border: 0;
+  border: 2px solid #333;
+  border-color: #333;
   margin: 30px 0;
   font-weight: bold;
-  background: linear-gradient(to left, #6e25db 0%, #e815e5 100%);
   filter: alpha(opacity=70);
 }
 
@@ -155,7 +155,7 @@ header .intro-text {
 .aboutContainerShadowBox {
   border-radius: 29px;
   box-shadow: 5px 5px 10px lightgray !important;
-  padding:25px;
+  padding: 25px;
 }
 
 .about-container {
@@ -165,8 +165,8 @@ header .intro-text {
 }
 
 .about-img {
-  height:100%;
-  width:auto;
+  height: 100%;
+  width: auto;
 }
 
 #about p {
@@ -195,9 +195,8 @@ header .intro-text {
 }
 
 #contact .btn-custom:hover {
-  box-shadow: 0px 4px 15px rgba(110, 37, 219, 0.5);
-  transition: all 0.3s ease;
   color: white;
+  background-color: #000;
 }
 
 .form-group {
@@ -311,6 +310,7 @@ header .intro-text {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 19px;
 }
 
 .image {
@@ -324,9 +324,9 @@ header .intro-text {
   overflow: hidden !important;
   transition: opacity 0.4s ease-in-out;
   opacity: 0;
+  border-radius: 29px;
+  box-shadow: 5px 5px 10px lightgray !important;
 }
-
-
 
 @keyframes fadeOut {
   0% {
